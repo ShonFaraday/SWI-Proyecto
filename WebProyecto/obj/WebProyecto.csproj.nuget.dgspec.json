@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yonad\\source\\repos\\WebProyecto\\WebProyecto\\WebProyecto.csproj": {}
+    "C:\\Users\\adfg_\\OneDrive\\Documentos\\CIBERTEC - Proyectos\\SWI-Proyecto-main\\WebProyecto\\WebProyecto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yonad\\source\\repos\\WebProyecto\\WebProyecto\\WebProyecto.csproj": {
+    "C:\\Users\\adfg_\\OneDrive\\Documentos\\CIBERTEC - Proyectos\\SWI-Proyecto-main\\WebProyecto\\WebProyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yonad\\source\\repos\\WebProyecto\\WebProyecto\\WebProyecto.csproj",
+        "projectUniqueName": "C:\\Users\\adfg_\\OneDrive\\Documentos\\CIBERTEC - Proyectos\\SWI-Proyecto-main\\WebProyecto\\WebProyecto.csproj",
         "projectName": "WebProyecto",
-        "projectPath": "C:\\Users\\yonad\\source\\repos\\WebProyecto\\WebProyecto\\WebProyecto.csproj",
-        "packagesPath": "C:\\Users\\yonad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yonad\\source\\repos\\WebProyecto\\WebProyecto\\obj\\",
+        "projectPath": "C:\\Users\\adfg_\\OneDrive\\Documentos\\CIBERTEC - Proyectos\\SWI-Proyecto-main\\WebProyecto\\WebProyecto.csproj",
+        "packagesPath": "C:\\Users\\adfg_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adfg_\\OneDrive\\Documentos\\CIBERTEC - Proyectos\\SWI-Proyecto-main\\WebProyecto\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yonad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adfg_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,12 +44,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -80,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<WebProyecto.Models.Membresia>
 
 @{
-    ViewData["Title"] = "Membresías";
+    ViewData["Title"] = "Listado de Membresías";
 }
 
-<h1>Membresías</h1>
+<h2>Listado de Membresías</h2>
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Nueva Membresía</a>
 </p>
 
-<table class="table table-striped">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Código</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Max Libros</th>
-            <th>Días Préstamo</th>
-            <th>Costo</th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.First().ID_M)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Descripcion)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Max_Libros_Prestamo)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Dias_Prestamo)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Costo)</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -31,10 +31,10 @@
                 <td>@item.Descripcion</td>
                 <td>@item.Max_Libros_Prestamo</td>
                 <td>@item.Dias_Prestamo</td>
-                <td>@item.Costo.ToString("C")</td>
+                <td>@item.Costo</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID_M" class="btn btn-sm btn-warning">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.ID_M" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID_M" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID_M" class="btn btn-danger btn-sm">Eliminar</a>
                 </td>
             </tr>
         }

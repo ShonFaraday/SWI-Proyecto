@@ -4,53 +4,42 @@
     ViewData["Title"] = "Nueva Membresía";
 }
 
-<h1>Nueva Membresía</h1>
+<h2>Nueva Membresía</h2>
 
 <form asp-action="Create" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    <div class="mb-3">
-        <label asp-for="ID_M" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="ID_M"></label>
         <input asp-for="ID_M" class="form-control" />
         <span asp-validation-for="ID_M" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Nombre" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
         <input asp-for="Nombre" class="form-control" />
         <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Descripcion" class="form-label"></label>
-        <textarea asp-for="Descripcion" class="form-control"></textarea>
-        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control" />
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Max_Libros_Prestamo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Max_Libros_Prestamo"></label>
         <input asp-for="Max_Libros_Prestamo" class="form-control" />
-        <span asp-validation-for="Max_Libros_Prestamo" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Dias_Prestamo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Dias_Prestamo"></label>
         <input asp-for="Dias_Prestamo" class="form-control" />
-        <span asp-validation-for="Dias_Prestamo" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Costo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Costo"></label>
         <input asp-for="Costo" class="form-control" />
-        <span asp-validation-for="Costo" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <br />
+    <button type="submit" class="btn btn-success">Guardar</button>
     <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </form>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

@@ -4,50 +4,37 @@
     ViewData["Title"] = "Editar Membresía";
 }
 
-<h1>Editar Membresía</h1>
+<h2>Editar Membresía</h2>
 
 <form asp-action="Edit" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
     <input type="hidden" asp-for="ID_M" />
 
-    <div class="mb-3">
-        <label asp-for="Nombre" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
         <input asp-for="Nombre" class="form-control" />
-        <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Descripcion" class="form-label"></label>
-        <textarea asp-for="Descripcion" class="form-control"></textarea>
-        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control" />
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Max_Libros_Prestamo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Max_Libros_Prestamo"></label>
         <input asp-for="Max_Libros_Prestamo" class="form-control" />
-        <span asp-validation-for="Max_Libros_Prestamo" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Dias_Prestamo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Dias_Prestamo"></label>
         <input asp-for="Dias_Prestamo" class="form-control" />
-        <span asp-validation-for="Dias_Prestamo" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Costo" class="form-label"></label>
+    <div class="form-group">
+        <label asp-for="Costo"></label>
         <input asp-for="Costo" class="form-control" />
-        <span asp-validation-for="Costo" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <br />
+    <button type="submit" class="btn btn-primary">Actualizar</button>
     <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </form>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
-
