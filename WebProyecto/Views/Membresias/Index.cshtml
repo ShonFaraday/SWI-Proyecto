@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebProyecto.Models.Membresia>
+
+@{
+    ViewData["Title"] = "Membresías";
+}
+
+<h1>Membresías</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nueva Membresía</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Max Libros</th>
+            <th>Días Préstamo</th>
+            <th>Costo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID_M</td>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Max_Libros_Prestamo</td>
+                <td>@item.Dias_Prestamo</td>
+                <td>@item.Costo.ToString("C")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID_M" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID_M" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
